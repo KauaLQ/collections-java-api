@@ -9,7 +9,7 @@ public class UsuarioConjuntoConvidados {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 150);
 
-        String[] opcoes = {"Adicionar", "Remover", "Total de Convidados", "Todos os Convidados"};
+        String[] opcoes = {"Adicionar", "Remover", "Total de Convidados", "Todos os Convidados", "Pesquisar Convidados", "Atualizar Código"};
         JComboBox<String> comboBox = new JComboBox<>(opcoes);
 
         JTextField nomeConvidado = new JTextField();
@@ -148,6 +148,36 @@ public class UsuarioConjuntoConvidados {
                 conjuntoConvidados.contarConvidados();
             } else if (opcaoSelecionada.equals("Todos os Convidados")) {
                 conjuntoConvidados.exibirConvidados();
+            } else if (opcaoSelecionada.equals("Pesquisar Convidados")) {
+                frame.setSize(450, 225);
+                frame.setLocationRelativeTo(null);
+
+                nomeConvidado.setVisible(true);
+                textoNomeConvidado.setVisible(true);
+                addButton.setText("Pesquisar");
+                addButton.setVisible(true);
+                cancelButton.setEnabled(true);
+                okButton.setEnabled(false);
+                okButton.setVisible(false);
+                panel.revalidate(); // Atualiza o layout
+                panel.repaint(); // Redesenha o painel
+            } else if (opcaoSelecionada.equals("Atualizar Código")){
+                frame.setSize(450, 225);
+                frame.setLocationRelativeTo(null);
+
+                textoCodigoConvidado.setText("Digite o NOVO código do convidado:");
+
+                nomeConvidado.setVisible(true);
+                textoNomeConvidado.setVisible(true);
+                codigoConvidado.setVisible(true);
+                textoCodigoConvidado.setVisible(true);
+                addButton.setText("Atualizar");
+                addButton.setVisible(true);
+                cancelButton.setEnabled(true);
+                okButton.setEnabled(false);
+                okButton.setVisible(false);
+                panel.revalidate(); // Atualiza o layout
+                panel.repaint(); // Redesenha o painel
             }
         });
 
@@ -175,6 +205,7 @@ public class UsuarioConjuntoConvidados {
             textoCodigoConvidado.setVisible(false);
             addButton.setVisible(false);
             addButton.setText("Adicionar");
+            textoCodigoConvidado.setText("Digite o código do convidado:");
             nomeConvidado.setText("");
             codigoConvidado.setText("");
             cancelButton.setEnabled(false);
@@ -197,6 +228,18 @@ public class UsuarioConjuntoConvidados {
             else if (textoBotao.equals("Remover")){
                 int novoCodigo = Integer.parseInt(codigoConvidado.getText());
                 conjuntoConvidados.removerConvidado(novoCodigo);
+                codigoConvidado.setText("");
+            }
+            else if (textoBotao.equals("Pesquisar")){
+                String novoConvidado = nomeConvidado.getText();
+                conjuntoConvidados.pesquisarPorNome(novoConvidado);
+                nomeConvidado.setText("");
+            }
+            else if (textoBotao.equals("Atualizar")) {
+                String novaConvidado = nomeConvidado.getText();
+                int novoCodigo = Integer.parseInt(codigoConvidado.getText());
+                conjuntoConvidados.atualizarCodigoConvidado(novaConvidado, novoCodigo);
+                nomeConvidado.setText("");
                 codigoConvidado.setText("");
             }
         });

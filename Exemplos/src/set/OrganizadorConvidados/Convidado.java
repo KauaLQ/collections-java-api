@@ -21,6 +21,11 @@ public class Convidado {
         return codigoConvidado;
     }
 
+    //setter
+    public void setCodigoConvidado(int codigoConvidado) {
+        this.codigoConvidado = codigoConvidado;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,9 +41,8 @@ public class Convidado {
     //formatação
     @Override
     public String toString() {
-        return "Convidado{" +
-                "nome='" + nome + '\'' +
-                ", codigoConvidado=" + codigoConvidado +
-                '}';
+        return "\nConvidado: " + nome +
+                ", Codigo do Convidado: " + codigoConvidado +
+                "\n";
     }
 }

@@ -42,4 +42,36 @@ public class ConjuntoConvidados {
     public void exibirConvidados(){
         JOptionPane.showMessageDialog(null, convidadoSet, "Convidaos Cadastrados", JOptionPane.INFORMATION_MESSAGE);
     }
+
+    public void pesquisarPorNome(String nome){
+        Set<Convidado> convidadoPorNome = new HashSet<>();
+        if (!convidadoSet.isEmpty()) {
+            for (Convidado c : convidadoSet) {
+                if (c.getNome().startsWith(nome)) {
+                    convidadoPorNome.add(c);
+                }
+            }
+            JOptionPane.showMessageDialog(null, convidadoPorNome, "Convidaos Cadastrados", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Nenhum convidado encontrado!", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    public void atualizarCodigoConvidado(String nome, int novoCodigo){
+        Convidado convidadoParaAtualizar = null;
+        if (!convidadoSet.isEmpty()) {
+            for (Convidado c : convidadoSet) {
+                if (c.getNome().equalsIgnoreCase(nome)) {
+                    c.setCodigoConvidado(novoCodigo);
+                    convidadoParaAtualizar = c;
+                    break;
+                }
+            }
+            JOptionPane.showMessageDialog(null, "O código do convidado " + nome + " foi atualizado para " + novoCodigo, "Informe", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Nenhum convidado encontrado!", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 }
