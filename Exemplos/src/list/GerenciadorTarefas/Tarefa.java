@@ -1,4 +1,4 @@
-package list;
+package list.GerenciadorTarefas;
 
 public class Tarefa {
     //atributo

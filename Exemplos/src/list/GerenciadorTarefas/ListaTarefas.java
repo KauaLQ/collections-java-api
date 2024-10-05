@@ -1,4 +1,5 @@
-package list;
+package list.GerenciadorTarefas;
+
 import java.util.*;
 import javax.swing.*;
 public class ListaTarefas {

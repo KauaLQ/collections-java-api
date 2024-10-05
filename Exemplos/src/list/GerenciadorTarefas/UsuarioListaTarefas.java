@@ -1,4 +1,6 @@
-package list;
+package list.GerenciadorTarefas;
+import list.GerenciadorTarefas.ListaTarefas;
+
 import javax.swing.*;
 import java.awt.*;
 
