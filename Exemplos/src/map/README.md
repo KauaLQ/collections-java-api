@@ -1,10 +1,5 @@
 # MAP
 
-<p align="center">
-<img src="../../../../assets/image/map-interface-hierarchy.png" alt="Map interface hierarchy Java"><br>
-<a href="https://data-flair.training/blogs/collection-framework-in-java/">Hierarchy of Collection Framework in Java </a>
-</p>
-
 - A interface `Map` é usada para mapear dados na forma de chaves e valores.
 - O `Map` do Java é um objeto que mapeia chaves para valores.
 - Um `Map` não pode conter chaves duplicadas: cada chave pode mapear no máximo um valor.
@@ -23,11 +18,9 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class Map." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html.
 
-# Exercícios Resolvidos:
+# Exercícios Resolvidos
 
----
-
-## Operações Básicas com Map
+### Operações Básicas com Map:
 
 ### 1. Agenda de Contatos
 
@@ -42,7 +35,7 @@ Crie uma classe chamada "AgendaContatos" que utilize um Map para armazenar os co
 
 ---
 
-## Pesquisa em Map
+### Pesquisa em Map:
 
 ### 1. Estoque de Produtos com Preço
 
