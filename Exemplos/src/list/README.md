@@ -1,10 +1,5 @@
 # LIST
 
-<p align="center">
-<img src="../../../../assets/image/list-interface-hierarchy.png" alt="List interface hierarchy Java"><br>
-<a href="https://data-flair.training/blogs/collection-framework-in-java/">Hierarchy of Collection Framework in Java </a>
-</p>
-
 - A interface <code>List</code> é uma coleção ordenada que permite a inclusão de elementos duplicados.
 - É um dos tipos de coleção mais utilizados em Java, e as classes de implementação comuns são <code>ArrayList</code> e <code>LinkedList</code>.
 - A <code>List</code> se assemelha a uma matriz com comprimento dinâmico, permitindo adicionar ou remover elementos.
@@ -23,11 +18,9 @@
 
 [2] "Java™ Platform, Standard Edition 17 API Specification - Class List." Oracle. Disponível em: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html.
 
-# Exercícios Resolvidos:
+# Exercícios Resolvidos
 
----
-
-## Operações Básicas com List
+### Operações Básicas com List:
 
 ### 1. Lista de Tarefas
 <p>Crie uma classe chamada "ListaTarefas" que possui uma lista de tarefas como atributo. Cada tarefa é representada por uma classe chamada "Tarefa" que possui um atributo de descrição. Implemente os seguintes métodos:
@@ -40,7 +33,7 @@
 
 ----
 
-## Pesquisa em List
+### Pesquisa em List:
 
 ### 1. Catálogo de Livros
 
